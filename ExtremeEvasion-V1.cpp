@@ -1,6 +1,5 @@
 #include <iostream>
 #include <conio.h>
-#include <graphics.h>
 #include <windows.h>
 #include <time.h>
 
@@ -123,7 +122,7 @@ void instructions(){
 	system("cls");
 	cout<<"Instrucciones";
 	cout<<"\n---------------------";
-	cout<<"\n Evita chocar con los coches.";
+	cout<<"\n Evita chocar con los coches";
 	cout<<"\n\n Press 'a' para moverte a la derecha";
 	cout<<"\n Press 'd' para moverete a la izquierda";
 	cout<<"\n press esc para salir";
@@ -147,12 +146,12 @@ void play(){
 	gotoxy(WIN_WIDTH + 7, 2); cout<<"Extreme Evasion";
 	gotoxy(WIN_WIDTH + 6, 4); cout<<"----------";
 	gotoxy(WIN_WIDTH + 6, 6); cout<<"----------";
-	gotoxy(WIN_WIDTH + 7, 12); cout<<"Controles ";
+	gotoxy(WIN_WIDTH + 7, 12); cout<<"Control ";
 	gotoxy(WIN_WIDTH + 7, 13); cout<<"----------";
 	gotoxy(WIN_WIDTH + 2, 14); cout<<"A Tecla -Izquierda";
 	gotoxy(WIN_WIDTH + 2, 15); cout<<"D Tecla -Derecha";
 	
-	gotoxy(18, 5); cout<<"Presiona cualquier tecla para empezar";
+	gotoxy(18, 5); cout<<"Pressiona cualquier tecla para empezar";
 	getch();
 	gotoxy(18, 5); cout<<"                                      ";
 	
@@ -209,61 +208,17 @@ void play(){
 
 int main(){
 	
-	
-	int screenWidth = GetSystemMetrics(SM_CXSCREEN);
-	 int screenHeight = GetSystemMetrics(SM_CYSCREEN);
-
-	    // a graphics driver from disk
-	    initwindow(screenWidth,screenHeight,"",-3,-3);
-
-	    // location of text
-	    float x = screenWidth/3;
-	    int y = screenHeight/2.5;
-        int fontStyle=2;
-	    setcolor(fontStyle);
-	    // font style
-
-	    // font direction
-	    int direction = 0;
-
-	    // font size
-	    int font_size = 20;
-
-	    // for setting text style
-	    settextstyle(fontStyle, direction, font_size);
-
-	    //for printing text in graphics window
-	    outtextxy(x, y, "GRUPO 2 PRESENTA");
-        Sleep(2000);
-        x = screenWidth/3.3;
-        y = screenHeight/2.5;
-	    fontStyle=10;
-	    setcolor(fontStyle);
-	    font_size= 8;
-	    settextstyle(fontStyle, direction, font_size);
-	    outtextxy(x,y,"Extreme Evasion");
-	    Sleep(2000);
-	    x = screenWidth/3;
-	           y = screenHeight/1.8;
-	   	    fontStyle=2;
-	   	    setcolor(fontStyle);
-	   	    font_size= 10;
-	   	    settextstyle(fontStyle, direction, font_size);
-	   	    outtextxy(x,y,"Presiona una tecla para continuar");
-	    getch();
-	    closegraph();
-	
 	setcursor(0,0);
 	srand( (unsigned)time(NULL));
 	
 	do{
 		system("cls");
-		gotoxy(10,5); cout<<" ------------------- ";
+		gotoxy(10,5); cout<<" -------------------------- ";
 		gotoxy(10,6); cout<<" |      Extreme Evasion    |";
-		gotoxy(10,7); cout<<" ------------------- ";
+		gotoxy(10,7); cout<<" -------------------------- ";
 		gotoxy(10,9); cout<<" 1.Start Game";
 		gotoxy(10,10); cout<<" 2.Instrucciones";
-		gotoxy(10,11); cout<<" 3.Salir";
+		gotoxy(10,11); cout<<" 3.salir";
 		gotoxy(10,13); cout<<" Seleccione una opcion: ";
 		char op = getche();
 		
